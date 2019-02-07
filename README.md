@@ -8,13 +8,13 @@ A simple way to solve those problem is to block followers of some users, but thi
 
 ## Installation
 
-Firstly, install [Python 3](https://python.org). After that, just download or clone this repositoy, and install the only direct dependency, [Twint](https://github.com/twintproject/twint). To do so, run
+Firstly, install [Python 3](https://python.org). After that, just download or clone this repositoy, and install the only direct dependency, [Twint](https://github.com/twintproject/twint). To do so, inside a shell or bash inside the Typhon folder's, run
 
 ```
 pip3 install twint
 ```
 
-or, inside a shell or bash inside the Typhon folder's
+or
 
 ```
 pip install -r requirements.txt
@@ -38,14 +38,19 @@ Run the following command inside a shell
 py typhon.py
 ```
 
-According to the users that you have choosen, it may take a while. Indeed, the program does not use the Official Twitter API. However, you can do whatever you want during that time. Even if the connection is lost, you computer crash or I don't know, the progress will be saved. Just **don't forget to remove the users that already have been processed**.
-
-
+According to the users that you have choosen, it may take a while. Indeed, the program does not use the Official Twitter API. However, you can do whatever you want during that time. Even if the connection is lost, your computer crash or I don't know, the progress will be saved. Just **don't forget to remove the users that already have been processed**.
 
 Once it is done, you can import the list of users on Twitter, right [here](https://twitter.com/settings/blocked), to block them all. Unfortunately, you have to select each file one by one. It will take a while to update your database.
 
-
-
 ## Configuration
 
-The only configuration available is the ability to choose the approximate size of the files at the end. I personnaly recommend 48000 octets. Note that the maximum for Twitter is 50000 octets.
+The configuration is inside the `typhon.py` file (yep, that's dirty). Search `# Config` to find it.
+
+| Name       | Description                                                                                                                         | Default value |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| sizeFile   | Approximate size of the files at the end. Note that the maximum for Twitter is 50000 octets.                                        | 48000         |
+| removeUser | Remove users from the list of `users.txt` once they have been processed if `True`. Set it to `False` to keep the name of the users. | `True`        |
+
+
+
+

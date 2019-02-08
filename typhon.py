@@ -81,6 +81,7 @@ def name_final_file(config, output):
     Generate the name of one of the final file
     :param config: dictionary of the configuration
     :param config: path to expect output
+    :return name of the file to open
     '''
     i = -1
     condition = True

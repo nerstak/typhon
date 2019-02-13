@@ -12,7 +12,7 @@ def search_followers(users, config):
     print("Searching followers")
     i = 0
     for name in users:
-        print(str(i / len(users) * 100) + "%. " + str(i) + " done, " + str(len(users)) + " remaining.")
+        print(str(round(i / len(users) * 100, 2)) + "%. " + str(i) + " done, " + str(len(users) - i) + " remaining.")
         write_csv(name, config)
         i += 1
 
@@ -80,7 +80,7 @@ def name_final_file(config, output):
     '''
     Generate the name of one of the final file
     :param config: dictionary of the configuration
-    :param config: path to expect output
+    :param output: path to expect output
     :return name of the file to open
     '''
     i = -1

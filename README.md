@@ -17,7 +17,7 @@ pip3 install twint
 or
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 On Windows, shift and right-click on nothing, an select Powershell to directly open a shell inside the folder.
@@ -38,7 +38,7 @@ Run the following command inside a shell
 py typhon.py
 ```
 
-According to the users that you have choosen, it may take a while. Indeed, the program does not use the Official Twitter API. However, you can do whatever you want during that time. Even if the connection is lost, your computer crash or I don't know, the progress will be saved. Just **don't forget to remove the users that already have been processed**.
+According to the users that you have choosen, it may take a while. Indeed, the program does not use the Official Twitter API. However, you can do whatever you want during that time. Even if the connection is lost, your computer crash or I don't know, progress will be saved.
 
 Once it is done, you can import the list of users on Twitter, right [here](https://twitter.com/settings/blocked), to block them all. Unfortunately, you have to select each file one by one. It will take a while to update your database.
 
@@ -50,6 +50,4 @@ The configuration is inside the `typhon.py` file (yep, that's dirty). Search `# 
 |:----------:|:-----------------------------------------------------------------------------------------------------------------------------------:|:--------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | sizeFile   | Approximate size of the files at the end. Note that the maximum for Twitter is 50000 octets.                                        | 48000          | Any positive int                                                                                                                                                                                                                                                                                                                                                           |
 | removeUser | Remove users from the list of `users.txt` once they have been processed if `True`. Set it to `False` to keep the name of the users. | `True`         | Boolean                                                                                                                                                                                                                                                                                                                                                                    |
-| output     | Way of generating final files.                                                                                                      | `severalFiles` | `severalFiles` generates differents files with a size corresponding to sizeFile, without any distinction between users. `singleFile` generates a single file, without any distinction between users. `folderByUser` generates differents files , in a different folder for each user. `fileByUser` generates a single, for each user.with a size corresponding to sizeFile |
-
-
+| output     | Way of generating final files.                                                                                                      | `severalFiles` | `severalFiles` generates differents files with a size corresponding to sizeFile, without any distinction between users. `singleFile` generates a single file, without any distinction between users. `folderByUser` generates differents files , in a different folder for each user. `fileByUser` generates a single, for each user.with a size corresponding to sizeFile |
